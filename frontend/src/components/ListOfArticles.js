@@ -45,7 +45,7 @@ const ListOfArticles = () => {
       </tr>
     </thead>
     <tbody>
-    
+
     </tbody>
   </table>
     </Fragment>

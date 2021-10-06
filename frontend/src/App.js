@@ -1,17 +1,31 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 import './App.css';
-import CreateArticle from './components/CreateArticle';
-import EditArticle from './components/EditArticle';
-import ListOfArticles from './components/ListOfArticles';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Signup from './components/Signup';
+import About from './components/About';
+import Profile from './components/Profile';
+import Home from './components/Home';
+import store from './store';
+import reducer from './reducer';
+import img1 from './images/MindFlLogo.svg'
 function App() {
-    return (
-      <Fragment>
-        <div className="container">
-        <CreateArticle />
-        <EditArticle/>
-        <ListOfArticles/>
-        </div>
-      </Fragment>
+    return ( <div className = "App">
+        <Router>
+        <nav>
+        <span> <Link to = "/Home" ><img src={img1} alt="mindfullness"/></Link></span>
+        <span> <Link to = "/Home"className ="landing" >Home </Link></span>
+        <span> <Link to = "/about"className = "white" > About </Link></span >
+        <span> <Link to = "/signup"className = "white" >Signup</Link></span >
+        <span><Link to = "/profile"className = "white" > Profile</Link></span >
+        </nav>
+ <Route path = "/Home" exact component = { Home }/>
+  <Route path = "/about" component = { About }/> 
+  <Route path = "/signup" component = { Signup }/>
+   <Route path = "/profile"component = { Profile }/>
+    </Router>
+    <store/>
+    <reducer/>
+         </div>
     );
 }
 

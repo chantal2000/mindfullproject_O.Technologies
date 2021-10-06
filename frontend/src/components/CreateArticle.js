@@ -1,4 +1,5 @@
 import React,{Fragment,useState} from 'react';
+import './CreateArticle.css';
 const CreateArticle = () => {
     const [idea_title,setIdeaTitle]=useState("")
     const onSubmitForm = async e => {
@@ -20,7 +21,7 @@ const CreateArticle = () => {
             <h1 className="text-center mt-5"> Create Article </h1>
             <form action=""onSubmit={onSubmitForm}>
                 <textarea name="" id="" cols="30" rows="10"className="form-control"value={idea_title}  onChange={e => setIdeaTitle(e.target.value)}>
-                </textarea> <button className="btn btn-success">Post your article</button>
+                </textarea> <button className="btn btn-primary">Post your article</button>
             </form>
         </Fragment>  
     )

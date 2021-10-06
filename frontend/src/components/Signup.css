@@ -1,0 +1,131 @@
+h1 {
+    margin-top: 0%;
+    margin-bottom: 5%;
+    color: rgb(237, 38, 54);
+    font-weight: bolder;
+}
+
+button {
+    margin: 2%;
+    background-color: rgb(237, 38, 54);
+    color: white;
+    border-radius: 30px;
+    border: 2px solid white;
+    padding: 10px;
+    width: 10%;
+    z-index: 15;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: rgb(7, 100, 141);
+}
+
+.home {
+    background-image: url("https://funderstanding.com/wp-content/uploads/2011/04/iStock_000012148264XSmall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    margin-top: 0;
+    opacity: 0.7;
+    /* opacity: 0.5; */
+}
+
+.message {
+    margin-top: 25%;
+    margin-left: 34%;
+    margin-right: 34%;
+    font-weight: bolder;
+}
+
+.container {
+    background-color: rgb(241, 116, 127);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 20%;
+}
+
+.app-wrapper {
+    background-color: white;
+    min-width: 350px;
+    min-height: 650px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.title {
+    color: rgb(237, 38, 54);
+    text-align: center;
+    margin: 80px 8px 40px 8px;
+}
+
+.name,
+.email,
+.password {
+    margin: 20px;
+    color: blue;
+    font-size: 16px;
+}
+
+.password {
+    margin-bottom: 40px;
+}
+
+input {
+    height: 32px;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.form-success {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    min-width: 170px;
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.label {
+    margin-right: 10%;
+}
+
+.submit {
+    margin: 2%;
+    background-color: rgb(237, 38, 54);
+    color: white;
+    border-radius: 30px;
+    border: 2px solid white;
+    padding: 10px;
+    width: 10%;
+    z-index: 15;
+    font-weight: bolder;
+    width: 40%;
+}
+
+.title {
+    margin-top: 0%;
+}
