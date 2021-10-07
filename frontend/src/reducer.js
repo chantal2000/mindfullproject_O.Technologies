@@ -1,7 +1,7 @@
 let lastId = 0;
 
 function reducer(state = [], action) {
-    if (action.type === 'bugAdded')
+    if (action.type === 'ArticleAdded')
         return [
             ...state,
             {
@@ -10,8 +10,8 @@ function reducer(state = [], action) {
                 resolved: false
             }
         ];
-    else if (action.type === 'bugRemoved')
-        return state.filter(bug => bug.id !== action.payload.id)
+    else if (action.type === 'ArticleRemoved')
+        return state.filter(article => article.id !== action.payload.id)
     return state;
 }
 export default reducer;
