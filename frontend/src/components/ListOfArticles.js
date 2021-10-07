@@ -30,7 +30,7 @@ const ListOfArticles = () => {
     {articles.map(article=>(
         <tr key={article.user_id}>
             <td>{article.article_description}</td>
-            <td>Edit</td>
+            <td>Edit Article</td>
             <td><button className=""onClick={() => deleteArticle(article.user_id)}>Delete</button></td>
         </tr>
     ))}
