@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import About from './About';
+import './Home.css';
 export default function Home() {
     return (
         <div className="home">

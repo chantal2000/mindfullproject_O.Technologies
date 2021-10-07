@@ -1,5 +1,6 @@
 import {useState} from "react";
 import EditUser from "./EditUser";
+import './EditProfile.css';
 export default ({changeToFalse})=>{
     const [fullname,setFullName]=useState("");
     const [email,setEmail]=useState("");
