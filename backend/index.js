@@ -5,7 +5,6 @@ app.use(cors());
 const pool = require("./db")
 app.use(express.json());
 
-
 // create article
 app.post("/article", async(req, res) => {
     try {
@@ -38,7 +37,7 @@ app.put("/article/:id", async(req, res) => {
             "UPDATE mindfull SET description = $1 WHERE user_id = $2", [article_description, id]
         );
 
-        res.json("An article was updated!");
+        res.json("An article was edited!");
     } catch (err) {
         console.error(err.message);
     }
@@ -53,16 +52,11 @@ app.get("/article", async(req, res) => {
         console.error(err.message);
     }
 });
-
-//Read a specific Article
-
+//Read  specific Articles
 app.get("/article/:id", async(req, res) => {
     try {
         const { id } = req.params;
-        const article = await pool.query("SELECT * FROM mindfull WHERE user_id = $1", [
-            id
-        ]);
-
+        const article = await pool.query("SELECT * FROM mindfull WHERE user_id = $1", [id]);
         res.json(article.rows[0]);
     } catch (err) {
         console.error(err.message);
