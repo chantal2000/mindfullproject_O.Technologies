@@ -12,7 +12,7 @@ app.post("/article", async(req, res) => {
         const { user_id } = req.body;
         const { article_title } = req.body;
         const { article_description } = req.body;
-        const newarticle = await pool.query('INSERT INTO mindfull (user_id,article_title,article_description) VALUES($1,$2,$3)', [user_id, article_title, article_description]);
+        const newarticle = await pool.query('INSERT INTO mindfull (user_id,article_title,article_description) VALUES($user_id,$article_title,$article_description)', [user_id, article_title, article_description]);
         res.json(newarticle)
     } catch (err) {
         console.error(err.message)
@@ -22,7 +22,7 @@ app.post("/article", async(req, res) => {
 app.delete("/article/:id", async(req, res) => {
     try {
         const { id } = req.params;
-        const deletearticle = await pool.query("DELETE ROM mindfull WHERE user_id=$1", [id]);
+        const deletearticle = await pool.query(`DELETE ROM mindfull WHERE user_id=$id`, [id]);
         res.json("Article was deleted")
     } catch (err) {
         console.log(err.message);
@@ -34,7 +34,7 @@ app.put("/article/:id", async(req, res) => {
         const { id } = req.params;
         const { article_description } = req.body;
         const updateArticle = await pool.query(
-            "UPDATE mindfull SET description = $1 WHERE user_id = $2", [article_description, id]
+            `UPDATE mindfull SET description = $article_description WHERE user_id = $id`, [article_description, id]
         );
 
         res.json("An article was edited!");
@@ -56,7 +56,7 @@ app.get("/article", async(req, res) => {
 app.get("/article/:id", async(req, res) => {
     try {
         const { id } = req.params;
-        const article = await pool.query("SELECT * FROM mindfull WHERE user_id = $1", [id]);
+        const article = await pool.query("SELECT * FROM mindfull WHERE user_id = $id", [id]);
         res.json(article.rows[0]);
     } catch (err) {
         console.error(err.message);
