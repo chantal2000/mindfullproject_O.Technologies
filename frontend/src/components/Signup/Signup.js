@@ -31,69 +31,36 @@ export default function Signup() {
             formSubmitted(true);
         };
     }, [errors]);
-    return ( <
-            div className = "container" >
-            <
-            div className = "app-wrapper" >
-            <
-            div >
-            <
-            h2 className = "title" > Create Account < /h2> <
-            /div> <
-            form action = ""
-            className = "form-wrapper" >
-            <
-            div className = "name" >
-            <
-            label className = "label" > Full name < /label> <
-            input type = "text"
-            name = "name"
-            className = "type"
-            value = { values.name }
-            onChange = { handleChange }
-            /> {
-                errors.fullname && < p className = "error" > { errors.fullname } < /p>} <
-                    /div> <
-                    div className = "email" >
-                    <
-                    label className = "label" > Email < /label> <
-                    input type = "text"
-                name = "email"
-                className = "type"
-                value = { values.email }
-                onChange = { handleChange }
+    return ( <div className = "container" >
+            <div className = "app-wrapper" >
+            <div>
+            <h2 className = "title" > Create Account </h2> 
+            </div> 
+            <form action = ""className = "form-wrapper" >
+            <div className = "name" >
+            <label className = "label" > Full name </label>
+             <input type = "text"name = "name"className = "type"value = { values.name }onChange = { handleChange }/> 
+             {errors.fullname && < p className = "error" > { errors.fullname } </p>} </div>
+              <div className = "email" >
+                    <label className = "label"> Email </label> 
+                    <input type = "text"name = "email"className = "type"value = { values.email }onChange = { handleChange }
                 /> {
-                    errors.email && < p className = "error" > { errors.email } < /p>} <
-                        /div> <
-                        div className = "password" >
-                        <
-                        label className = "label" > Password < /label> <
-                        input type = "password"
-                    name = "password"
-                    className = "type"
-                    value = { values.password }
-                    onChange = { handleChange }
-                    /> {
-                        errors.password && < p className = "error" > { errors.password } < /p>} <
-                            /div> <
-                            button className = "submit"
-                        onClick = { handleFormSubmit } > Register < /button> <
-                            p > Arleady have account ? < /p> <
-                            Router >
-                            <
-                            Link to = "/login" > < button className = "submit" > Login < /button></Link >
-                            <
-                            Route path = "/login"
-                        component = { Login }
-                        /> 
+                    errors.email && < p className = "error" > { errors.email } </p>} </div> 
+                    <div className = "password">
+                        <label className = "label" > Password </label> 
+                        <input type = "password" name = "password"className = "type"value = { values.password }onChange = { handleChange }/> {
+                        errors.password && < p className = "error" > { errors.password } </p>} </div>
+                         <button className = "submit"onClick = { handleFormSubmit } > Register </button> 
+                         <p > Arleady have account ? </p> 
+                         <Router>
+                            <Link to = "/login" > <button className = "submit" > Login </button></Link >
+                            <Route path = "/login"component = { Login }/> 
 
 
-                        <
-                        /Router> <
-                        /form> <
-                        /div> { /* {!formSubmitted ? <RegistrationFailed formSubmitted={RegistrationFailed}/> :<RegistrationDone formSubmitted={RegistrationDone}/> } */ }
+                        </Router> 
+                        </form> 
+                        </div> { /* {!formSubmitted ? <RegistrationFailed formSubmitted={RegistrationFailed}/> :<RegistrationDone formSubmitted={RegistrationDone}/> } */ }
 
-                        <
-                        /div>
+                        </div>
                     )
                 }

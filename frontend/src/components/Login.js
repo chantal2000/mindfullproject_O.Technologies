@@ -26,58 +26,29 @@ function Login() {
             formSubmitted(true);
         };
     }, [errors]);
-    return ( <
-            div className = "container" >
-            <
-            div className = "app-wrapper" >
-            <
-            div >
-            <
-            h2 className = "title" > Create acount < /h2> <
-            /div> <
-            form action = ""
-            className = "form-wrapper" >
-            <
-            div className = "name" >
-            <
-            label className = "label" > Full name < /label> <
-            input type = "text"
-            name = "name"
-            className = "type"
-            value = { values.name }
-            onChange = { handleChange }
-            /> {
-                errors.fullname && < p className = "error" > { errors.fullname } < /p>} <
-                    /div> <
-                    div className = "password" >
-                    <
-                    label className = "label" > Password < /label> <
-                    input type = "password"
-                name = "password"
-                className = "type"
-                value = { values.password }
-                onChange = { handleChange }
-                /> {
-                    errors.password && < p className = "error" > { errors.password } < /p>} <
-                        /div>
+    return ( <div className = "container" >
+            <div className = "app-wrapper" >
+            <div>
+            <h2 className = "title"> Create acount </h2> 
+            </div> 
+            <form action = ""className = "form-wrapper" >
+            <div className = "name" >
+            <label className = "label" > Full name </label> 
+            <input type = "text"name = "name"className = "type"value = { values.name }onChange = { handleChange }/> {
+                errors.fullname && <p className = "error"> { errors.fullname } </p>} 
+                </div> <div className = "password">
+                    <label className = "label" > Password </label>
+                     <input type = "password"name = "password"className = "type"value = { values.password }onChange = { handleChange }/> {
+                    errors.password && < p className = "error" > { errors.password } </p>}
+                     </div>
 
-                    <
-                    Router >
-                        <
-                        Link to = "/profile" > < button className = "submit" > Login < /button></Link >
-                        <
-                        Route path = "/profile"
-                    component = { Profile }
-                    /> 
+                    <Router >
+                        <Link to = "/profile"> <button className = "submit" > Login </button></Link >
+                        <Route path = "/profile"component = { Profile }/> 
+                    </Router> </form> </div>
+                     { /* {!formSubmitted ? <RegistrationFailed formSubmitted={RegistrationFailed}/> :<RegistrationDone formSubmitted={RegistrationDone}/> } */ }
 
-
-                    <
-                    /Router> <
-                    /form> <
-                    /div> { /* {!formSubmitted ? <RegistrationFailed formSubmitted={RegistrationFailed}/> :<RegistrationDone formSubmitted={RegistrationDone}/> } */ }
-
-                    <
-                    /div>
+                    </div>
                 )
             }
 

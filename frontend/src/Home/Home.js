@@ -5,10 +5,10 @@ import './Home.css';
 export default function Home() {
     return ( <div className = "home" >
         <h1> Welcome To Mindfull Open place </h1>  
-        <p className = "message" > Despite of where you are from, your culture, etc..This is a an open place
+        <p className = "message"> Despite of where you are from, your culture, etc..This is a an open place
         for everyone to share your thoughts </p> 
         <Router>
-        <Link to = "/about" > <button> Get started </button></Link >
+        <Link to ="/about" > <button> Get started </button></Link >
         <Route path = "/about"
         component = { About }/> 
          </Router> 

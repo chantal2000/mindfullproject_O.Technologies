@@ -6,7 +6,7 @@ const CreateArticle = () => {
         e.preventDefault();
         try {
             const body = { idea_title };
-            const response = await fetch("http://localhost:5100/article", {
+            const response = await fetch("http://localhost:6000/article", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -23,7 +23,7 @@ const CreateArticle = () => {
         onChange = { e => setIdeaTitle(e.target.value) } >
         </textarea> <button className="btn btn-primary">Post your article</button >
         </form> 
-        </Fragment >
+        </Fragment>
     )
 };
 export default CreateArticle;

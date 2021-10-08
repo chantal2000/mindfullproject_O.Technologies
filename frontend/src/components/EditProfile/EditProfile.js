@@ -19,26 +19,12 @@ export default ({ changeToFalse }) => {
             console.log("Error")
         }
     }
-    return ( <
-        div >
-        <
-        div onClick = {
-            () => changeToFalse() } > Go back < /div> <
-        input type = "text"
-        value = { fullname }
-        onChange = { event => setFullName(event.target.value) }
-        /> <
-        input type = "text"
-        value = { email }
-        onChange = { event => setEmail(event.target.value) }
-        /> <
-        input type = "text"
-        value = { password }
-        onChange = { event => setPassword(event.target.value) }
-        /> <
-        button onClick = { onSubmit } > Submit < /button>
-
-        <
-        /div>
+    return ( <div>
+        <div onClick = {() => changeToFalse() } > Go back </div> 
+        <input type = "text"value = { fullname }onChange = { event => setFullName(event.target.value) }/>
+         <input type = "text"value = { email }onChange = { event => setEmail(event.target.value) }/>
+          <input type = "text"value = { password }onChange = { event => setPassword(event.target.value) }/>
+           <button onClick = { onSubmit } > Submit </button>
+        </div>
     )
 }
