@@ -62,6 +62,6 @@ app.get("/article/:id", async(req, res) => {
         console.error(err.message);
     }
 });
-app.listen(5300, () => {
-    console.log("the server  has started on the port 5300")
+app.listen(6000, () => {
+    console.log("the server  has started on the port 6000")
 });
