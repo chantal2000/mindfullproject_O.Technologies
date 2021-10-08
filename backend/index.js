@@ -22,7 +22,7 @@ app.post("/article", async(req, res) => {
 app.delete("/article/:id", async(req, res) => {
     try {
         const { id } = req.params;
-        const deletearticle = await pool.query(`DELETE ROM mindfull WHERE user_id=$id`, [id]);
+        const deletearticle = await pool.query(`DELETE FROM mindfull WHERE user_id=$id`, [id]);
         res.json("Article was deleted")
     } catch (err) {
         console.log(err.message);
