@@ -4,7 +4,6 @@ const cors = require('cors')
 const pool = require("./db")
 app.use(cors());
 app.use(express.json());
-
 // create article
 app.post("/article", async(req, res) => {
     try {
@@ -60,6 +59,6 @@ app.get("/article/:id", async(req, res) => {
         console.error(err.message);
     }
 });
-app.listen(6260, () => {
-    console.log("the server  has started on the port 6260")
+app.listen(port, () => {
+    console.log(`the server has started on the port ${port}`)
 });
