@@ -10,7 +10,7 @@ app.post("/article", async(req, res) => {
     try {
         console.log(req.body);
         const { article_title, article_description, song_name } = req.body;
-        const newarticle = await pool.query('INSERT INTO myarticles (article_title,article_description,song_name) VALUES($1,$2,$3)', [article_title, article_description, song_name]);
+        const newarticle = await pool.query('INSERT INTO myarticles (article_title,article_description,song_name) VALUES($article_title,$article_description,$song_name)', [article_title, article_description, song_name]);
         res.json(newarticle)
     } catch (err) {
         console.error(err.message)
