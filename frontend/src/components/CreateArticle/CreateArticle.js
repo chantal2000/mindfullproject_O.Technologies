@@ -6,7 +6,7 @@ const CreateArticle = () => {
         e.preventDefault();
         try {
             const body = { idea_title };
-            const response = await fetch("http://localhost:6000/article", {
+            const response = await fetch("http://localhost:6260/article", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
