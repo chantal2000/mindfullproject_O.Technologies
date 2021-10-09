@@ -1,6 +1,6 @@
 import '../components/CreateArticle/CreateArticle.css';
 import { createSlice } from "@reduxjs/toolkit";
-import reducer from './reducer';
+// import reducer from './reducer';
 const ArticleSlice = createSlice({
     name: "article",
     initialState: [
@@ -19,7 +19,10 @@ const ArticleSlice = createSlice({
             state.push(newarticle)
         }
     }
+
 });
+
+
 
 export const { CreateArticle } = ArticleSlice.actions;
 export default ArticleSlice.reducer;
