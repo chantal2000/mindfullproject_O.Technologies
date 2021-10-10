@@ -60,6 +60,6 @@ app.get("/article/:id", async(req, res) => {
         console.error(err.message);
     }
 });
-app.listen(port, () => {
+app.listen(port => {
     console.log(`the server has started on the port ${port}`)
 });
