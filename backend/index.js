@@ -1,5 +1,5 @@
 const express = require("express");
-require('dotenv').config();
+require('dotenv').config()
 const app = express();
 const cors = require('cors')
 const pool = require("./db")
@@ -60,6 +60,7 @@ app.get("/article/:id", async(req, res) => {
         console.error(err.message);
     }
 });
-app.listen(port => {
-    console.log(`the server has started on the port ${port}`)
+
+app.listen(() => {
+    console.log(`Server started on port ${process.env.PORT_NUMBER}`)
 });
